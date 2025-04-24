@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>ورود به سیستم</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="نام کاربری" required>
+        <input type="password" id="password" placeholder="رمز عبور" required>
+        <button type="submit">ورود</button>
+    </form>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            sessionStorage.setItem("loggedIn", true);
+            window.location.href = "map.html";
+        });
+    </script>
+</body>
+</html>
